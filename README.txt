@@ -1,2 +1,2 @@
-#Arquitetura
-![Data Schema](wiki/diagram/GestãoAgroTech.svg)
+#.Arquitetura
+![Database Schema](wiki/diagram/GestãoAgroTech.svg)
