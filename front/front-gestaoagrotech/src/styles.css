@@ -1,0 +1,24 @@
+.mat-slider{
+  width: 100%;
+}
+
+.mat-slider-temperatura{
+  padding-right: 25px;
+}
+
+.mat-slider-umidade{
+  padding-right: 10px;
+}
+
+.green-button{
+  color: white;
+  background-color: green;
+}
+
+.input-text{
+  width: 350px;
+}
+
+.mat-card{
+  width: min-content;
+}
