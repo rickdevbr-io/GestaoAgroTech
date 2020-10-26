@@ -10,8 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import org.slf4j.*;
 
 
-@RestController("/api")
-public class AgroTechController {
+@RestController
+@RequestMapping("/api")
+public class ProducerController {
 
     @Autowired
     KafkaTemplate<String, AgroTech> kafkaTemplate;
