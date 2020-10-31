@@ -2,43 +2,40 @@ package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech;
 
 public class AgroTech {
 
-    String iddrone;
+    Long iddrone;
     String latitude;
     String longitude;
-    double temperatura;
-    double umidade;
-    boolean rastreamento;
+    Short temperatura;
+    Short umidade;
 
     @Override
     public String toString()
     {
         return "AgroTech{"
-                + "iddrone = " + iddrone
+                + "iddrone = " + iddrone.toString()
                 + ", latitude = '" + latitude + "'"
                 + ", longitude = '" + longitude + "'"
                 + ", temperatura = '" + temperatura + "'"
                 + ", umidade = '" + umidade + "'"
-                + ", rastreamento = '" + rastreamento + "'"
                 + "}";
     }
 
     public AgroTech() {
     }
 
-    public AgroTech(String iddrone, String latitude, String longitude, double temperatura, double umidade, boolean rastreamento) {
+    public AgroTech(Long iddrone, String latitude, String longitude, Short temperatura, Short umidade) {
         this.iddrone = iddrone;
         this.latitude = latitude;
         this.longitude = longitude;
         this.temperatura = temperatura;
         this.umidade = umidade;
-        this.rastreamento = rastreamento;
     }
 
-    public String getIddrone() {
+    public Long getIddrone() {
         return iddrone;
     }
 
-    public void setIddrone(String iddrone) {
+    public void setIddrone(Long iddrone) {
         this.iddrone = iddrone;
     }
 
@@ -58,27 +55,19 @@ public class AgroTech {
         this.longitude = longitude;
     }
 
-    public double getTemperatura() {
+    public Short getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(double temperatura) {
+    public void setTemperatura(Short temperatura) {
         this.temperatura = temperatura;
     }
 
-    public double getUmidade() {
+    public Short getUmidade() {
         return umidade;
     }
 
-    public void setUmidade(double umidade) {
+    public void setUmidade(Short umidade) {
         this.umidade = umidade;
-    }
-
-    public boolean isRastreamento() {
-        return rastreamento;
-    }
-
-    public void setRastreamento(boolean rastreamento) {
-        this.rastreamento = rastreamento;
     }
 }
