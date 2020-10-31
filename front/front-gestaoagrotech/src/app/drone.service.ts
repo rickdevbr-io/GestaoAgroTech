@@ -9,13 +9,13 @@ import {AbstractHttpService} from './http-client.service';
 })
 export class DroneService extends AbstractHttpService{
   protected getBackendUrl(): string {
-    return 'http://localhost:8080';
+    return 'http://localhost:8080/api';
   }
 
   constructor(
     public http: HttpClient
   ) {
-    super('/teste/v1/', http);
+    super('/requisicoes/', http);
   }
 
   pesquisarDrone(droneId: number): Observable<DroneResponseDTO> {
