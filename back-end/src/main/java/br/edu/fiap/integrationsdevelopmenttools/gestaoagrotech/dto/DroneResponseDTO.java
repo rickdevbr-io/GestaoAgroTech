@@ -1,23 +1,19 @@
 package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.dto;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@Setter
+@Data	
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class DroneResponseDTO {
 
-    @JsonProperty
     private Long id;
-    @JsonProperty
     private Long latitude;
-    @JsonProperty
     private Long longitude;
-    @JsonProperty
     private int temperatura;
-    @JsonProperty
-    private int humidade;
+    private int umidade;
 }

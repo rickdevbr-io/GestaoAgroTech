@@ -31,7 +31,7 @@ public class DroneServiceImpl implements DroneService {
         droneEntity.setLatitude(droneUpdateDTO.getLatitude());
         droneEntity.setLongitude(droneUpdateDTO.getLongitude());
         droneEntity.setTemperatura(droneUpdateDTO.getTemperatura());
-        droneEntity.setHumidade(droneUpdateDTO.getHumidade());
+        droneEntity.setUmidade(droneUpdateDTO.getUmidade());
 
         DroneEntity droneEntitySalvo = droneRepository.save(droneEntity);
 
@@ -44,7 +44,7 @@ public class DroneServiceImpl implements DroneService {
                 .latitude(droneEntity.getLatitude())
                 .longitude(droneEntity.getLongitude())
                 .temperatura(droneEntity.getTemperatura())
-                .humidade(droneEntity.getHumidade())
+                .umidade(droneEntity.getUmidade())
                 .build();
     }
 

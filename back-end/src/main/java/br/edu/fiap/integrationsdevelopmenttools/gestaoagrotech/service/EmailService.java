@@ -1,4 +1,4 @@
-package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.Service;
+package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.mail.SimpleMailMessage;

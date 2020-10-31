@@ -1,15 +1,16 @@
 package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.Component;
 
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.AgroTech;
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.Service.ConsumerService;
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.Service.EmailService;
+import java.io.IOException;
+
+import javax.mail.MessagingException;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import javax.mail.MessagingException;
-import java.io.IOException;
+import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.AgroTech;
+import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.ConsumerService;
+import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.EmailService;
 
 @Component
 public class ScheduledComDelay {

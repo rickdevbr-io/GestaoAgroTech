@@ -19,5 +19,5 @@ public class DroneEntity {
     private Long latitude;
     private Long longitude;
     private int temperatura;
-    private int humidade;
+    private int umidade;
 }
