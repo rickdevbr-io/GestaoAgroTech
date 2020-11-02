@@ -1,14 +1,14 @@
 export class DroneUpdateDTO {
   latitude: number;
-  longitude: number;
-  temperatura: number;
+  longitude: string;
+  temperatura: string;
   umidade: number;
 }
 
 export class DroneResponseDTO {
   id: number;
-  latitude: number;
-  longitude: number;
+  latitude: string;
+  longitude: string;
   temperatura: number;
   umidade: number;
 }
