@@ -1,7 +1,7 @@
 <div class="container">
   <mat-card class="mat-card-background-image">
     <div>
-      <mat-icon (click)="clickPesquisar()">home</mat-icon>
+      <mat-icon (click)="clickPesquisar()">search</mat-icon>
       <mat-form-field class="input-text">
         <mat-label>ID Drone</mat-label>
         <input matInput class="font-color" [(ngModel)]="droneId">
@@ -28,7 +28,7 @@
       <mat-slider thumbLabel [displayWith]="formatoUmindade" tickInterval="1000" min="0" max="100" [(ngModel)]="droneResponseDTO.umidade"></mat-slider>
     </div>
     <div class="center-button">
-      <button mat-raised-button class="green-button" (click)="clickRastreamento()">Salvar</button>
+      <button mat-raised-button class="green-button" (click)="clickSalvar()">Salvar</button>
     </div>
     <div *ngIf="ativarRastreamento" class="center-button">
       <button mat-raised-button class="green-button" (click)="clickRastreamento()">Ativar rastreamento</button>

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.AgroTech;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/kafka")
 public class ProducerController {
 
     @Autowired
