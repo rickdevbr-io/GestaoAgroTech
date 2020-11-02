@@ -1,4 +1,4 @@
-package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.Config;
+package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.config;
 
 
 import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.AgroTech;

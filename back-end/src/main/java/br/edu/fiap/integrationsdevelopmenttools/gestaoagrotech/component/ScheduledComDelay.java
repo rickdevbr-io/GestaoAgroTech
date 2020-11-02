@@ -1,4 +1,4 @@
-package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.Component;
+package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.component;
 
 import java.io.IOException;
 

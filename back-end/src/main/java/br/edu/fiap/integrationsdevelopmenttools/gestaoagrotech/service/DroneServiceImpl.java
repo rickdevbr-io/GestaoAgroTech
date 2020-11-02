@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.List;
+
 @Service
 public class DroneServiceImpl implements DroneService {
 
@@ -36,6 +38,23 @@ public class DroneServiceImpl implements DroneService {
         DroneEntity droneEntitySalvo = droneRepository.save(droneEntity);
 
         return droneToJsonResponse(droneEntitySalvo);
+    }
+
+    @Override
+    public void updateDrone(Long id, DroneUpdateDTO droneUpdateDTO) {
+        DroneEntity droneEntity = getDrone(id);
+
+        droneEntity.setLatitude(droneUpdateDTO.getLatitude());
+        droneEntity.setLongitude(droneUpdateDTO.getLongitude());
+        droneEntity.setTemperatura(droneUpdateDTO.getTemperatura());
+        droneEntity.setUmidade(droneUpdateDTO.getUmidade());
+
+        droneRepository.save(droneEntity);
+    }
+
+    @Override
+    public List<DroneEntity> findAll() {
+        return droneRepository.findAll();
     }
 
     private DroneResponseDTO droneToJsonResponse(DroneEntity droneEntity) {
