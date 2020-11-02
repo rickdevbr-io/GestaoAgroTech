@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {DroneResponseDTO, DroneUpdateDTO} from './objects';
-import { DroneService } from './drone.service'
+import { DroneResponseDTO, DroneUpdateDTO } from './objects';
+import {HttpClient} from '@angular/common/http';
+import { DroneServices } from './drone.services';
 
 // @ts-ignore
 @Component({
@@ -16,7 +17,8 @@ export class AppComponent {
   droneId: number;
 
   constructor(
-    private droneService: DroneService
+    private http: HttpClient,
+    private droneServices: DroneServices
   ) { }
 
   // tslint:disable-next-line:typedef
@@ -34,18 +36,27 @@ export class AppComponent {
     this.ativarRastreamento = !this.ativarRastreamento;
   }
 
+  // tslint:disable-next-line:typedef
   clickSalvar(){
-
+    this.transferirDadosDto();
+    this.droneServices.salvarDrone(this.droneId, this.droneUpdateDTO).subscribe(
+      resultData => console.log('this.droneResponseDTO', this.droneResponseDTO)
+    );
   }
 
   // tslint:disable-next-line:typedef
   clickPesquisar() {
-    // tslint:disable-next-line:no-debugger
-    debugger;
-    this.droneService.pesquisarDrone(this.droneId).subscribe(
-      // tslint:disable-next-line:no-debugger
-      resultData => { debugger; this.droneResponseDTO = resultData; }
-      );
+    this.droneServices.pesguisaDrone(this.droneId).subscribe(
+      resultData => this.droneResponseDTO = resultData
+    );
+  }
+
+  // tslint:disable-next-line:typedef
+  transferirDadosDto(){
+    this.droneUpdateDTO.longitude = this.droneResponseDTO.longitude;
+    this.droneUpdateDTO.latitude = this.droneResponseDTO.latitude;
+    this.droneUpdateDTO.umidade = this.droneResponseDTO.umidade;
+    this.droneUpdateDTO.temperatura = this.droneResponseDTO.temperatura;
   }
 
 }

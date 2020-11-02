@@ -16,7 +16,7 @@ import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.EmailServ
 public class ScheduledComDelay {
 
     private final EmailService emailService;
-    private static final String MAIL = "email@gmail.com";
+    private static final String MAIL = "ricardodeveloper21br@gmail.com";
     private static final String SUBJECT = "AGROTECH DRONE";
     private final ConsumerService consumerService;
 
