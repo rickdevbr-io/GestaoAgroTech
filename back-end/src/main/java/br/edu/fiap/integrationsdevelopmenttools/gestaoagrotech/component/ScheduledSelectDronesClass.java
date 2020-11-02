@@ -32,7 +32,7 @@ public class ScheduledSelectDronesClass {
         this.droneService = droneService;
     }
 
-    @Scheduled(fixedDelay = 11000)
+    @Scheduled(fixedDelay = 60000)
     public void scheduledUpdateDrones() throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper();
 
