@@ -24,7 +24,7 @@ export class DroneServices extends AbstractHttpService{
   }
 
   salvarDrone(idDrone: number, droneUpdateDTO: DroneUpdateDTO): Observable<any>{
-    return this.httpClient.post( this.getBackendUrl() + this.uri + `${idDrone}`, droneUpdateDTO, this.options());
+    return this.httpClient.put( this.getBackendUrl() + this.uri + `${idDrone}`, droneUpdateDTO, this.options());
   }
 
 }
