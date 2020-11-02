@@ -4,11 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
 @Builder
-public class DroneResponseDTO {
+@ToString
+public class DroneJsonDTO {
 
     @JsonProperty
     private Long id;

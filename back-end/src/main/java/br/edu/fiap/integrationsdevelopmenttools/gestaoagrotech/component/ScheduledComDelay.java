@@ -4,11 +4,11 @@ import java.io.IOException;
 
 import javax.mail.MessagingException;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.AgroTech;
 import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.ConsumerService;
 import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.EmailService;
 
@@ -28,11 +28,12 @@ public class ScheduledComDelay {
 
     @Scheduled(fixedDelay = 10000)
     public void executar() throws MessagingException, IOException {
+        ObjectMapper mapper = new ObjectMapper();
 
-        AgroTech agroTech = new AgroTech();
-        consumerService.ConsumeMessage(agroTech);
+        String mensagem = new String();
+        consumerService.ConsumeMessage(mensagem);
 
-        emailService.sendMail(MAIL, SUBJECT, agroTech.toString());
+        emailService.sendMail(MAIL, SUBJECT, mensagem);
         System.out.println("Executou o Scheduled com delay");
     }
 }
