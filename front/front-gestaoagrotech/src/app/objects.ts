@@ -1,7 +1,7 @@
 export class DroneUpdateDTO {
-  latitude: number;
+  latitude: string;
   longitude: string;
-  temperatura: string;
+  temperatura: number;
   umidade: number;
 }
 

@@ -13,4 +13,7 @@ public interface DroneRepository extends JpaRepository<DroneEntity, Long> {
 
     @Override
     List<DroneEntity> findAll();
+
+    @Query(value = "SELECT * from DRONES where (temperatura >= 35 or temperatura <=0) or (umidade <= 15)", nativeQuery = true)
+    List<DroneEntity> findAllForEmail();
 }

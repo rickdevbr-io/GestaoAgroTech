@@ -28,6 +28,11 @@
   color: white;
 }
 
+.input-text-search{
+  width: 325px;
+  color: white;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -45,4 +50,8 @@
   padding: 15px 20px;
   border-radius: 6px;
   font-size: 18px;
+}
+
+.mouse-click{
+  cursor: pointer;
 }

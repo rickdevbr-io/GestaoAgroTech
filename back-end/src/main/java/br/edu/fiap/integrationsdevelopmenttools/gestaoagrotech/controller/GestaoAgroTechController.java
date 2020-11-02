@@ -1,19 +1,13 @@
 package br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.controller;
 
+import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.dto.DroneJsonDTO;
+import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.dto.DroneUpdateDTO;
+import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.DroneService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
-
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.dto.DroneResponseDTO;
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.dto.DroneUpdateDTO;
-import br.edu.fiap.integrationsdevelopmenttools.gestaoagrotech.service.DroneService;
 
 @RestController
 @RequestMapping("requisicoes")
@@ -34,9 +28,9 @@ public class GestaoAgroTechController {
         ResponseEntity<Object> responseEntity;
 
         try {
-            DroneResponseDTO droneResponseDTO = droneService.findById(id);
+            DroneJsonDTO droneJsonDTO = droneService.findById(id);
 
-            responseEntity = ResponseEntity.ok().body(droneResponseDTO);
+            responseEntity = ResponseEntity.ok().body(droneJsonDTO);
             logger.info(DRONE_CONSULTA_REALIZADA);
             return responseEntity;
 
@@ -46,14 +40,14 @@ public class GestaoAgroTechController {
         }
     }
 
-    @PostMapping(URI_ID_DRONE)
-    public ResponseEntity<Object> updateDadosDrone(@PathVariable Long id, @RequestBody(required = false) DroneUpdateDTO droneUpdateDTO) {
+    @PutMapping(URI_ID_DRONE)
+    public ResponseEntity<Object> updateDadosDrone(@PathVariable Long id, @RequestBody DroneUpdateDTO droneUpdateDTO) {
         ResponseEntity<Object> responseEntity;
 
         try {
-            DroneResponseDTO droneResponseDTO = droneService.update(id, droneUpdateDTO);
+            DroneJsonDTO droneJsonDTO = droneService.update(id, droneUpdateDTO);
 
-            responseEntity = ResponseEntity.ok().body(droneResponseDTO);
+            responseEntity = ResponseEntity.ok().body(droneJsonDTO);
             logger.info(DRONE_ATUALIZADO);
             return responseEntity;
 
