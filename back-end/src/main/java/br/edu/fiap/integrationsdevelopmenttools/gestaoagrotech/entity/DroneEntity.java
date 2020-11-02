@@ -16,8 +16,8 @@ public class DroneEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long latitude;
-    private Long longitude;
+    private String latitude;
+    private String longitude;
     private int temperatura;
     private int umidade;
 }

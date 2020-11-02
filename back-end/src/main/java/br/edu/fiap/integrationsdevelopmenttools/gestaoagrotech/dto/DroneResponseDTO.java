@@ -13,9 +13,9 @@ public class DroneResponseDTO {
     @JsonProperty
     private Long id;
     @JsonProperty
-    private Long latitude;
+    private String latitude;
     @JsonProperty
-    private Long longitude;
+    private String longitude;
     @JsonProperty
     private int temperatura;
     @JsonProperty

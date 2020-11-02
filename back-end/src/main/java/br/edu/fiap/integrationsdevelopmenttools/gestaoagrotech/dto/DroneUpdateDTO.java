@@ -6,8 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class DroneUpdateDTO {
-    private Long latitude;
-    private Long longitude;
+    private String latitude;
+    private String longitude;
     private int temperatura;
     private int umidade;
 }
