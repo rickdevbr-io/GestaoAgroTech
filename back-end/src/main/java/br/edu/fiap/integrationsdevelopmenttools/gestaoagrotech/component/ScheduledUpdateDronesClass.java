@@ -66,9 +66,9 @@ public class ScheduledUpdateDronesClass {
             norteSul = "S";
 
 
-        valorInteiro = Integer.toString((int) (Math.random() * (latitudeMax - valorMin) + valorMin));
-        valorMinuto = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin) + valorMin));
-        valorSegundo = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin) + valorMin));
+        valorInteiro = Integer.toString((int) (Math.random() * (latitudeMax - valorMin + 1) + valorMin));
+        valorMinuto = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin + 1) + valorMin));
+        valorSegundo = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin + 1) + valorMin));
 
         return sinal.concat(valorInteiro).concat(grau).concat(valorMinuto).concat(minuto).concat(valorSegundo).concat(segundo).concat(norteSul);
     }
@@ -86,9 +86,9 @@ public class ScheduledUpdateDronesClass {
         if ((1 + (int) (Math.random() * 100)) <= 50)
             lesteOeste = "W";
 
-        valorInteiro = Integer.toString((int) (Math.random() * (longitudeMax - valorMin) + valorMin));
-        valorMinuto = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin) + valorMin));
-        valorSegundo = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin) + valorMin));
+        valorInteiro = Integer.toString((int) (Math.random() * (longitudeMax - valorMin + 1) + valorMin));
+        valorMinuto = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin + 1) + valorMin));
+        valorSegundo = String.format("%02d", (int) (Math.random() * (decimalMax - valorMin + 1) + valorMin));
 
         return sinal.concat(valorInteiro).concat(grau).concat(valorMinuto).concat(minuto).concat(valorSegundo).concat(segundo).concat(lesteOeste);
     }
