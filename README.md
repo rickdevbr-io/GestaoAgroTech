@@ -6,7 +6,7 @@ A cada 10 segundos são enviados para o message broker os dados de temperatura e
 # Diagrama :gear:
 ![Database Schema](wiki/diagram/GestãoAgroTech.svg)
 
-# Tech Stag :clipboard:
+# Tech Stack :clipboard:
 Front-end:
 - Angular 8
 
